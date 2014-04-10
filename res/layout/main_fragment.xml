@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.libanez.memoryapp.MainActivity$PlaceholderFragment" >
+
+    <Button
+        android:id="@+id/buttonRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Refresh" 
+        />
+
+    <TextView
+        android:id="@+id/textViewHeap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonRefresh"
+        android:layout_below="@+id/buttonRefresh"
+        android:text="1\n2\n3\n4" />
+
+    <Button
+        android:id="@+id/createBitmapButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="Create bitmap" />
+
+    <EditText
+        android:id="@+id/bitmapSizeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/createBitmapButton"
+        android:layout_alignBottom="@+id/createBitmapButton"
+        android:layout_toLeftOf="@+id/textView1"
+        android:layout_toRightOf="@+id/createBitmapButton"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bitmapSizeText"
+        android:layout_alignBottom="@+id/bitmapSizeText"
+        android:layout_alignParentRight="true"
+        android:text="KB" />
+
+    <Button
+        android:id="@+id/recycleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/createBitmapButton"
+        android:layout_alignLeft="@+id/createBitmapButton"
+        android:text="Recycle" />
+
+    <Button
+        android:id="@+id/nullButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/createBitmapButton"
+        android:layout_toRightOf="@+id/recycleButton"
+        android:text="Null" />
+
+    <Button
+        android:id="@+id/gcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/nullButton"
+        android:layout_alignBottom="@+id/nullButton"
+        android:layout_toRightOf="@+id/nullButton"
+        android:text="GC" />
+
+</RelativeLayout>
